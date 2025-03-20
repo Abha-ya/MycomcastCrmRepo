@@ -18,6 +18,9 @@ public class HomePage {
 	@FindBy(linkText = "Organizations")
 	private WebElement orgLink;
 	
+	@FindBy(linkText = "Products")
+	private WebElement productLink;
+	
 	@FindBy(linkText = "Contacts")
 	private WebElement contactLink;
 	
@@ -64,6 +67,18 @@ public class HomePage {
 		Actions act = new Actions(driver);
 		act.moveToElement(adminImg).perform();
 		signOutlink.click();
+	}
+	public WebDriver getDriver() {
+		return driver;
+	}
+	public WebElement getProductLink() {
+		return productLink;
+	}
+	public WebElement getAdminImg() {
+		return adminImg;
+	}
+	public WebElement getSignOutlink() {
+		return signOutlink;
 	}
 	
 	
